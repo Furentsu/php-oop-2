@@ -2,6 +2,8 @@
 
 require __DIR__ . '/customer.php';
 require __DIR__ . '/product.php';
+require __DIR__ . '/cart.php';
+
 
 
 
