@@ -11,10 +11,9 @@ echo $customer1->getSurname();
 echo $customer1->getEmail();
 echo $customer1->getPwd();
 
-$product1 = new Product('Air','Nike', 'Shoes', '100£');
+$product1 = new Product('Air','Nike', '100£');
 echo $product1->getName();
 echo $product1->getBrand();
-echo $product1->getCategory();
 echo $product1->getPrice();
 
 ?>

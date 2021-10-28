@@ -2,13 +2,11 @@
     class Product {
         private $name;
         private $brand;
-        private $category;
         private $price;
 
-        public function __construct($_name, $_brand, $_category, $_price) {
+        public function __construct($_name, $_brand, $_price) {
             $this->setName($_name);
             $this->setBrand($_brand);
-            $this->setCategory($_category);
             $this->setPrice($_price);
         }
 
@@ -32,16 +30,6 @@
             return $this->brand;
         }
 
-        // BRAND Setter and Getter
-
-        public function setCategory($category) {
-            $this->category = $category;
-        }
-
-        public function getCategory() {
-            return $this->category;
-        }
-
         // PRICE Setter and Getter
 
         public function setPrice($price) {
@@ -52,4 +40,35 @@
             return $this->price;
         }
     }; 
+
+    class Dress extends Product {
+
+        protected $size;
+        protected $texture;
+
+        
+        protected function __construct($_size, $_name, $_brand, $_category, $_price){
+
+            $this->size = $_size;
+            $this->texture = $texture;
+
+            parent::__construct($_name, $_brand, $_category, $_price);
+        }
+        
+    }
+
+    class Accessory extends Product {
+
+        protected $weight;
+        protected $comfort;
+        
+        protected function __construct($_weight, $_comfort, $_name, $_brand, $_category, $_price){
+
+            $this->weight = $weight;
+            $this->comfort = $comfort;
+
+            parent::__construct($_name, $_brand, $_category, $_price);
+        }
+        
+    }
 ?>
