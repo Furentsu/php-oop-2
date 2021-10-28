@@ -78,7 +78,6 @@
         public function getPwd() {
             return $this->pwd;
         }
-
     }; 
 
 ?>
